@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SizerMenuConfigForm</class>
+ <widget class="QWidget" name="SizerMenuConfigForm">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>420</width>
+    <height>320</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>KSizer</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QLabel" name="instructionsLabel">
+     <property name="text">
+      <string>Create and manage resize presets for the KSizer menu.</string>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="presetsGroup">
+     <property name="title">
+      <string>Presets</string>
+     </property>
+     <layout class="QVBoxLayout" name="presetsLayout">
+      <item>
+       <widget class="KEditListWidget" name="kcfg_Presets"/>
+      </item>
+      <item>
+    <widget class="QLabel" name="formatHintLabel">
+     <property name="text">
+      <string>Format: "Label|Width|Height" or "WidthxHeight". Examples: 1280×720 or Coding|1280|720. Invalid entries are ignored. Commas and "|" are reserved, removed from labels, and commas separate entries.</string>
+     </property>
+        <property name="wordWrap">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="behaviorGroup">
+     <property name="title">
+      <string>Behavior</string>
+     </property>
+     <layout class="QVBoxLayout" name="behaviorLayout">
+      <item>
+       <widget class="QCheckBox" name="kcfg_CenterWindow">
+        <property name="text">
+         <string>Center windows when applying presets</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="centerHintLabel">
+        <property name="text">
+         <string>When disabled, windows keep their current position and only resize.</string>
+        </property>
+        <property name="wordWrap">
+         <bool>true</bool>
+        </property>
+        <property name="indent">
+         <number>18</number>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="kcfg_ClampToArea">
+        <property name="text">
+         <string>Clamp oversized presets to screen</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="clampHintLabel">
+        <property name="text">
+         <string>When disabled, windows may be partially off-screen if the preset exceeds the available area.</string>
+        </property>
+        <property name="wordWrap">
+         <bool>true</bool>
+        </property>
+        <property name="indent">
+         <number>18</number>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="reloadHintLabel">
+     <property name="text">
+      <string>Note: If changes do not appear immediately, disable and re-enable the script in KWin Scripts.</string>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="linksLabel">
+     <property name="text">
+      <string>&lt;a href="https://github.com/allenguarnes/KSizer"&gt;GitHub&lt;/a&gt; · &lt;a href="https://buymeacoffee.com/allenguarnes"&gt;Buy Me a Coffee&lt;/a&gt; ☕</string>
+     </property>
+     <property name="openExternalLinks">
+      <bool>true</bool>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>KEditListWidget</class>
+   <extends>QWidget</extends>
+   <header location="global">KEditListWidget</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

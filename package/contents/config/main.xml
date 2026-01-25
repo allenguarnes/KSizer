@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kcfg xmlns="http://www.kde.org/standards/kcfg/1.0"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0
+      http://www.kde.org/standards/kcfg/1.0/kcfg.xsd" >
+  <kcfgfile name=""/>
+  <group name="">
+    <entry name="Presets" type="StringList">
+      <label>List of resize presets, each entry as Label|Width|Height or WidthxHeight</label>
+      <default>4:3 800×600|800|600,4:3 1024×768|1024|768,16:9 1280×720|1280|720,16:9 1600×900|1600|900,16:9 1920×1080|1920|1080,21:9 2560×1080|2560|1080</default>
+    </entry>
+    <entry name="ClampToArea" type="bool">
+      <label>Clamp oversized presets to screen</label>
+      <default>true</default>
+    </entry>
+    <entry name="CenterWindow" type="bool">
+      <label>Center windows when applying presets</label>
+      <default>true</default>
+    </entry>
+  </group>
+</kcfg>

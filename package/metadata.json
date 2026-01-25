@@ -1,0 +1,22 @@
+{
+  "KPlugin": {
+    "Authors": [
+      {
+        "Name": "Allen Guarnes"
+      }
+    ],
+    "Category": "Window Management",
+    "Description": "Resize windows to saved preset widths and heights from the window menu.",
+    "Icon": "preferences-system-windows-script-test",
+    "Id": "ksizer",
+    "License": "GPL-3.0-or-later",
+    "Name": "KSizer",
+    "Version": "1.0",
+    "Website": "https://github.com/allenguarnes/KSizer",
+    "BugReportUrl": "https://github.com/allenguarnes/KSizer/issues"
+  },
+  "X-KDE-ConfigModule": "kwin/effects/configs/kcm_kwin4_genericscripted",
+  "X-Plasma-API": "javascript",
+  "X-Plasma-MainScript": "code/main.js",
+  "KPackageStructure": "KWin/Script"
+}
