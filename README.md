@@ -2,6 +2,9 @@
 
 KSizer is a KWin script that adds resize presets to the window menu, letting you quickly size and center windows to saved dimensions.
 
+## Screenshot
+![KSizer window menu](docs/screenshot.png)
+
 ## Features
 - Adds a "KSizer " submenu in the window menu.
 - Resizes windows to preset widths and heights.
