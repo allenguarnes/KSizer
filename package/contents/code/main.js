@@ -52,7 +52,7 @@ function parsePresetEntry(entry) {
 
         width = parseInt(sizeMatch[1], 10);
         height = parseInt(sizeMatch[2], 10);
-        label = trimmed.replace(sizeMatch[0], "").trim();
+        label = trimmed;
     }
 
     if (!isFinite(width) || !isFinite(height) || width <= 0 || height <= 0) {
