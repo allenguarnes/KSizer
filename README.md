@@ -37,7 +37,7 @@ where N is the preset's position in the list.
 No keys are bound by default, so nothing conflicts with your existing shortcuts.
 
 1. Open System Settings > Keyboard > Shortcuts.
-2. Select KWin and search for "KSizer".
+2. Select Window Management and search for "KSizer".
 3. Bind a key to each preset you want, for example `Meta+Alt+1` for Preset 1.
 4. Focus a window and press the key to resize it.
 
