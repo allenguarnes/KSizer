@@ -15,8 +15,10 @@ KSizer is a KWin script that adds resize presets to the window menu, letting you
 - KDE Plasma with KWin scripting support (Plasma 6 recommended).
 
 ## Install
-1. Copy the `package` directory into your KWin scripts folder.
-   - Example: `~/.local/share/kwin/scripts/KSizer`
+1. Install the package with `kpackagetool6 --type=KWin/Script -i package`
+   (use `-u` instead of `-i` to update an existing install).
+   - Alternatively, copy the `package` directory to `~/.local/share/kwin/scripts/ksizer`
+     (the folder name must match the plugin Id).
 2. In System Settings, open Window Management > KWin Scripts.
 3. Enable the script and click Configure to edit presets.
 4. Click Apply.
