@@ -1,6 +1,6 @@
 # KSizer
 
-KSizer is a KWin script that adds resize presets to the window menu, letting you quickly size and center windows to saved dimensions.
+KSizer is a KWin script that adds resize presets to the window menu and to global keyboard shortcuts, letting you quickly size and center windows to saved dimensions.
 
 ## Screenshot
 ![KSizer window menu](docs/screenshot.png)
@@ -10,7 +10,7 @@ KSizer is a KWin script that adds resize presets to the window menu, letting you
 - Resizes windows to preset widths and heights.
 - Centers windows by default (configurable).
 - Presets are configurable from System Settings.
-- Each preset gets a global shortcut you can bind.
+- Each preset gets its own global keyboard shortcut, so one key press resizes the active window.
 
 ## Requirements
 - KDE Plasma with KWin scripting support (Plasma 6 recommended).
@@ -25,15 +25,24 @@ KSizer is a KWin script that adds resize presets to the window menu, letting you
 4. Click Apply.
 
 ## Usage
+### From the window menu
 1. Focus a window.
 2. Open the window menu using `Alt+F3` or by right clicking the titlebar.
 3. Open the "KSizer " submenu.
 4. Pick a preset to resize and center the window.
 
-### Keyboard shortcuts
-Each preset registers a shortcut named `KSizer: Preset N`, where N is its position in the list.
-No keys are bound by default. Bind them in System Settings > Keyboard > Shortcuts > KWin.
-The shortcut acts on the active window.
+### With keyboard shortcuts
+Each preset registers a global shortcut named `KSizer: Preset N`,
+where N is the preset's position in the list.
+No keys are bound by default, so nothing conflicts with your existing shortcuts.
+
+1. Open System Settings > Keyboard > Shortcuts.
+2. Select KWin and search for "KSizer".
+3. Bind a key to each preset you want, for example `Meta+Alt+1` for Preset 1.
+4. Focus a window and press the key to resize it.
+
+Shortcuts follow the preset's position, not its label.
+If you reorder presets, a key triggers whichever preset is now in that position.
 
 ## Configuration
 - Presets are stored under the `Presets` key in the script config.
@@ -52,7 +61,8 @@ No build, lint, or test tooling is configured.
 Manual testing:
 1. Enable or reload the script in System Settings > Window Management > KWin Scripts.
 2. Open any window, press `Alt+F3`, and select a preset.
-3. Verify the window resizes and centers within the available area.
+3. Press a bound `KSizer: Preset N` shortcut on a focused window.
+4. Verify the window resizes and centers within the available area.
 
 ## License
 GPL-3.0-or-later. See `LICENSE`.
