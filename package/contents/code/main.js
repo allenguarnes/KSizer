@@ -97,6 +97,10 @@ function loadPresets() {
 function resizeAndCenter(win, w, h) {
     if (!win || win.deleted) return;
 
+    // Maximized or fullscreen windows ignore geometry changes
+    if (win.fullScreen) win.fullScreen = false;
+    if (win.maximizeMode) win.setMaximize(false, false);
+
     // MaximizeArea respects panels/docks
     const area = workspace.clientArea(KWin.MaximizeArea, win);
     const clampToArea = readConfig(CONFIG_CLAMP_KEY, true) === true;
