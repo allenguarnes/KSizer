@@ -6,12 +6,12 @@
       }
     ],
     "Category": "Window Management",
-    "Description": "Resize windows to saved preset widths and heights from the window menu.",
+    "Description": "Resize windows to saved preset widths and heights from the window menu or global shortcuts.",
     "Icon": "preferences-system-windows-script-test",
     "Id": "ksizer",
     "License": "GPL-3.0-or-later",
     "Name": "KSizer",
-    "Version": "1.0",
+    "Version": "1.1",
     "Website": "https://github.com/allenguarnes/KSizer",
     "BugReportUrl": "https://github.com/allenguarnes/KSizer/issues"
   },
