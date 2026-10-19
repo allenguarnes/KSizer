@@ -141,3 +141,15 @@ registerUserActionsMenu(function (win) {
         items,
     };
 });
+
+// Named by position so user bindings survive label edits; no default keys
+loadPresets().forEach((p, i) => {
+    registerShortcut(
+        "KSizer Preset " + (i + 1),
+        "KSizer: Preset " + (i + 1) + " (" + p.text + ")",
+        "",
+        function () {
+            resizeAndCenter(workspace.activeWindow, p.w, p.h);
+        }
+    );
+});

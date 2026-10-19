@@ -10,6 +10,7 @@ KSizer is a KWin script that adds resize presets to the window menu, letting you
 - Resizes windows to preset widths and heights.
 - Centers windows by default (configurable).
 - Presets are configurable from System Settings.
+- Each preset gets a global shortcut you can bind.
 
 ## Requirements
 - KDE Plasma with KWin scripting support (Plasma 6 recommended).
@@ -29,10 +30,15 @@ KSizer is a KWin script that adds resize presets to the window menu, letting you
 3. Open the "KSizer " submenu.
 4. Pick a preset to resize and center the window.
 
+### Keyboard shortcuts
+Each preset registers a shortcut named `KSizer: Preset N`, where N is its position in the list.
+No keys are bound by default. Bind them in System Settings > Keyboard > Shortcuts > KWin.
+The shortcut acts on the active window.
+
 ## Configuration
 - Presets are stored under the `Presets` key in the script config.
 - Centering is enabled by default and can be changed in the configuration UI.
-- After changing presets, toggle the script off/on to refresh the menu.
+- After changing presets, toggle the script off/on to refresh the menu and shortcuts.
 
 ## Project Layout
 - `package/metadata.json`: KWin package metadata.
