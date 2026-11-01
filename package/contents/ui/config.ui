@@ -65,7 +65,7 @@
       <item>
        <widget class="QLabel" name="centerHintLabel">
         <property name="text">
-         <string>When disabled, windows keep their current position and only resize.</string>
+         <string>When disabled, windows keep their current position and only resize. Cascade and Grid arrangements always center.</string>
         </property>
         <property name="wordWrap">
          <bool>true</bool>
@@ -95,6 +95,105 @@
         </property>
         <property name="indent">
          <number>18</number>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="allWindowsGroup">
+     <property name="title">
+      <string>All windows of an app</string>
+     </property>
+     <layout class="QVBoxLayout" name="allWindowsLayout">
+      <item>
+       <layout class="QHBoxLayout" name="arrangementLayout">
+        <item>
+         <widget class="QLabel" name="arrangementLabel">
+          <property name="text">
+           <string>Arrangement:</string>
+          </property>
+          <property name="buddy">
+           <cstring>kcfg_AllWindowsArrangement</cstring>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="kcfg_AllWindowsArrangement">
+          <item>
+           <property name="text">
+            <string>Cascade</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Grid</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Stack</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item>
+         <spacer name="arrangementSpacer">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="spacingLayout">
+        <item>
+         <widget class="QLabel" name="spacingLabel">
+          <property name="text">
+           <string>Grid spacing:</string>
+          </property>
+          <property name="buddy">
+           <cstring>kcfg_GridSpacing</cstring>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QSpinBox" name="kcfg_GridSpacing">
+          <property name="suffix">
+           <string> px</string>
+          </property>
+          <property name="minimum">
+           <number>0</number>
+          </property>
+          <property name="maximum">
+           <number>200</number>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="spacingSpacer">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QLabel" name="arrangementHintLabel">
+        <property name="text">
+         <string>Applies to the app's windows on the current desktop, arranged per screen.
+
+Cascade - Offsets each window slightly. Always centered.
+Grid - Places windows side by side, separated by the grid spacing. Always centered. Falls back to Cascade when they do not fit.
+Stack - Places each window as if resized alone. Follows the centering setting.
+
+Minimized windows stay minimized and take no slot. They, and a screen with only one of the app's windows, follow the centering setting.</string>
+        </property>
+        <property name="wordWrap">
+         <bool>true</bool>
         </property>
        </widget>
       </item>

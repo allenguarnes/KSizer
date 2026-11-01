@@ -17,5 +17,20 @@
       <label>Center windows when applying presets</label>
       <default>true</default>
     </entry>
+    <entry name="AllWindowsArrangement" type="Enum">
+      <label>How to arrange windows when resizing all windows of an app</label>
+      <choices>
+        <choice name="Cascade"/>
+        <choice name="Grid"/>
+        <choice name="Stack"/>
+      </choices>
+      <default>Grid</default>
+    </entry>
+    <entry name="GridSpacing" type="Int">
+      <label>Gap in pixels between windows in the Grid arrangement</label>
+      <default>0</default>
+      <min>0</min>
+      <max>200</max>
+    </entry>
   </group>
 </kcfg>
